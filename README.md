@@ -9,6 +9,8 @@
 ### Find this project useful ? :heart:
 * Support it by clicking the :star: button on the upper right of this page. :v:
 
+The custom drawing view used in this project is taken from [here](https://github.com/miyosuda/TensorFlowAndroidMNIST)
+
 [Check out Mindorks awesome open source projects here](https://mindorks.com/open-source-projects)
 
 ### License

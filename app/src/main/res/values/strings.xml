@@ -16,4 +16,6 @@
 
 <resources>
     <string name="app_name">AndroidTensorFlowMNISTExample</string>
+    <string name="clear">Clear</string>
+    <string name="detect">Detect</string>
 </resources>
