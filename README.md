@@ -3,8 +3,12 @@
 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=102)](https://opensource.org/licenses/Apache-2.0)
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/amitshekhariitbhu/AndroidTensorFlowMachineLearningExample/blob/master/LICENSE)
 
-# This project is under development
-
+<p align="center">
+  <img src="https://raw.githubusercontent.com/MindorksOpenSource/AndroidTensorFlowMNISTExample/master/assets/1.png" width="250">
+  <img src="https://raw.githubusercontent.com/MindorksOpenSource/AndroidTensorFlowMNISTExample/master/assets/2.png" width="250">
+  <img src="https://raw.githubusercontent.com/MindorksOpenSource/AndroidTensorFlowMNISTExample/master/assets/3.png" width="250">
+</p>
+<br>
 
 ### Find this project useful ? :heart:
 * Support it by clicking the :star: button on the upper right of this page. :v:
