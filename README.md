@@ -10,6 +10,12 @@
 </p>
 <br>
 
+How to train model?
+To create model by yourself, install TensorFlow and run python scripts like
+```sh
+    $ python mnist.py
+```
+
 ### Find this project useful ? :heart:
 * Support it by clicking the :star: button on the upper right of this page. :v:
 
