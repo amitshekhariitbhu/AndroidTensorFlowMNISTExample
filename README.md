@@ -10,7 +10,7 @@
 </p>
 <br>
 
-How to train model?
+# How to train model?
 To create model by yourself, install TensorFlow and run python scripts like
 ```sh
     $ python mnist.py
