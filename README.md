@@ -9,6 +9,7 @@
 * This is an example project for creating machine learning model for MNIST to detect hand written digits.
 * Check [this project](https://github.com/MindorksOpenSource/AndroidTensorFlowMachineLearningExample) for building tensorFlow for Android.
 
+
 <p align="center">
   <img src="https://raw.githubusercontent.com/MindorksOpenSource/AndroidTensorFlowMNISTExample/master/assets/1.png" width="250">
   <img src="https://raw.githubusercontent.com/MindorksOpenSource/AndroidTensorFlowMNISTExample/master/assets/2.png" width="250">
@@ -25,7 +26,9 @@ To create model by yourself, install TensorFlow and run python scripts like
 ### Find this project useful ? :heart:
 * Support it by clicking the :star: button on the upper right of this page. :v:
 
-The custom drawing view used in this project is taken from [here](https://github.com/miyosuda/TensorFlowAndroidMNIST)
+### Credits
+* The classifier example has been taken from Google TensorFlow example.
+* The custom drawing view used in this project is taken from [here](https://github.com/miyosuda/TensorFlowAndroidMNIST).
 
 [Check out Mindorks awesome open source projects here](https://mindorks.com/open-source-projects)
 
