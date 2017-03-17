@@ -164,7 +164,7 @@ with g.as_default():
     W_OUT = tf.constant(W_OUT, name="W_OUT")
     B_OUT = tf.constant(B_OUT, name="B_OUT")
 
-    # skipped dropout for exported graph.
+    # skipped dropout for exported graph as there is no need for already calculated weights
 
     OUTPUT = tf.nn.softmax(tf.matmul(FC1, W_OUT) + B_OUT, name="output")
 
