@@ -18,6 +18,7 @@ package com.mindorks.tensorflowexample;
 
 import android.content.res.AssetManager;
 import android.os.Trace;
+import android.support.v4.os.TraceCompat;
 import android.util.Log;
 
 import org.tensorflow.contrib.android.TensorFlowInferenceInterface;
@@ -120,23 +121,23 @@ public class TensorFlowImageClassifier implements Classifier {
     @Override
     public List<Recognition> recognizeImage(final float[] pixels) {
         // Log this method so that it can be analyzed with systrace.
-        Trace.beginSection("recognizeImage");
+        TraceCompat.beginSection("recognizeImage");
 
         // Copy the input data into TensorFlow.
-        Trace.beginSection("fillNodeFloat");
+        TraceCompat.beginSection("fillNodeFloat");
         inferenceInterface.fillNodeFloat(
                 inputName, new int[]{inputSize * inputSize}, pixels);
-        Trace.endSection();
+        TraceCompat.endSection();
 
         // Run the inference call.
-        Trace.beginSection("runInference");
+        TraceCompat.beginSection("runInference");
         inferenceInterface.runInference(outputNames);
-        Trace.endSection();
+        TraceCompat.endSection();
 
         // Copy the output Tensor back into the output array.
-        Trace.beginSection("readNodeFloat");
+        TraceCompat.beginSection("readNodeFloat");
         inferenceInterface.readNodeFloat(outputName, outputs);
-        Trace.endSection();
+        TraceCompat.endSection();
 
         // Find the best classifications.
         PriorityQueue<Recognition> pq =
@@ -161,7 +162,7 @@ public class TensorFlowImageClassifier implements Classifier {
         for (int i = 0; i < recognitionsSize; ++i) {
             recognitions.add(pq.poll());
         }
-        Trace.endSection(); // "recognizeImage"
+        TraceCompat.endSection(); // "recognizeImage"
         return recognitions;
     }
 
