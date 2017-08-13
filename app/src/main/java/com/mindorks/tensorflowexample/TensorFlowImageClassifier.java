@@ -16,13 +16,6 @@
 
 package com.mindorks.tensorflowexample;
 
-import android.content.res.AssetManager;
-import android.os.Trace;
-import android.support.v4.os.TraceCompat;
-import android.util.Log;
-
-import org.tensorflow.contrib.android.TensorFlowInferenceInterface;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -31,6 +24,12 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.PriorityQueue;
 import java.util.Vector;
+
+import org.tensorflow.contrib.android.TensorFlowInferenceInterface;
+
+import android.content.res.AssetManager;
+import android.support.v4.os.TraceCompat;
+import android.util.Log;
 
 /**
  * Created by amitshekhar on 16/03/17.
@@ -58,6 +57,8 @@ public class TensorFlowImageClassifier implements Classifier {
     private String[] outputNames;
 
     private TensorFlowInferenceInterface inferenceInterface;
+
+    private boolean runStats = false;
 
     private TensorFlowImageClassifier() {
     }
@@ -97,10 +98,8 @@ public class TensorFlowImageClassifier implements Classifier {
         }
         br.close();
 
-        c.inferenceInterface = new TensorFlowInferenceInterface();
-        if (c.inferenceInterface.initializeTensorFlow(assetManager, modelFilename) != 0) {
-            throw new RuntimeException("TF initialization failed");
-        }
+        c.inferenceInterface = new TensorFlowInferenceInterface(assetManager, modelFilename);
+
         // The shape of the output is [N, NUM_CLASSES], where N is the batch size.
         int numClasses =
                 (int) c.inferenceInterface.graph().operation(outputName).output(0).shape().size(1);
@@ -124,19 +123,18 @@ public class TensorFlowImageClassifier implements Classifier {
         TraceCompat.beginSection("recognizeImage");
 
         // Copy the input data into TensorFlow.
-        TraceCompat.beginSection("fillNodeFloat");
-        inferenceInterface.fillNodeFloat(
-                inputName, new int[]{inputSize * inputSize}, pixels);
+        TraceCompat.beginSection("feed");
+        inferenceInterface.feed(inputName, pixels, new long[]{inputSize * inputSize});
         TraceCompat.endSection();
 
         // Run the inference call.
-        TraceCompat.beginSection("runInference");
-        inferenceInterface.runInference(outputNames);
+        TraceCompat.beginSection("run");
+        inferenceInterface.run(outputNames, runStats);
         TraceCompat.endSection();
 
         // Copy the output Tensor back into the output array.
-        TraceCompat.beginSection("readNodeFloat");
-        inferenceInterface.readNodeFloat(outputName, outputs);
+        TraceCompat.beginSection("fetch");
+        inferenceInterface.fetch(outputName, outputs);
         TraceCompat.endSection();
 
         // Find the best classifications.
@@ -168,7 +166,7 @@ public class TensorFlowImageClassifier implements Classifier {
 
     @Override
     public void enableStatLogging(boolean debug) {
-        inferenceInterface.enableStatLogging(debug);
+        runStats = debug;
     }
 
     @Override
