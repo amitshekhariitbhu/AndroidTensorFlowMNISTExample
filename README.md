@@ -52,4 +52,5 @@ To create model by yourself, install TensorFlow and run python scripts like
 ```
 
 ### Contributing to Android TensorFlow MNIST Machine Learning Example
-Just make pull request. You are in!
+All pull requests are welcome, make sure to follow the [contribution guidelines](CONTRIBUTING.md)
+when you submit pull request.
