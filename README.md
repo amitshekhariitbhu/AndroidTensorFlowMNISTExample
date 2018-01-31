@@ -9,6 +9,7 @@
 ##  About Android TensorFlow Machine Learning MNIST Example
 * This is an example project for creating machine learning model for MNIST to detect hand written digits.
 * Check [this project](https://github.com/MindorksOpenSource/AndroidTensorFlowMachineLearningExample) for building tensorFlow for Android.
+* Now, there is no need to build the library as the it is now available through maven. Check [this pull request](https://github.com/MindorksOpenSource/AndroidTensorFlowMNISTExample/pull/1/files).
 
 # [Read this article. It describes everything about creating custom model for Android using TensorFlow.](https://blog.mindorks.com/creating-custom-model-for-android-using-tensorflow-3f963d270bfb)
 
