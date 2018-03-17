@@ -13,6 +13,8 @@
 
 # [Read this article. It describes everything about creating custom model for Android using TensorFlow.](https://blog.mindorks.com/creating-custom-model-for-android-using-tensorflow-3f963d270bfb)
 
+# [Check the Android TensorFlow Lite Machine Learning Example.](https://github.com/amitshekhariitbhu/Android-TensorFlow-Lite-Example)
+
 <p align="center">
   <img src="https://raw.githubusercontent.com/MindorksOpenSource/AndroidTensorFlowMNISTExample/master/assets/1.png" width="250">
   <img src="https://raw.githubusercontent.com/MindorksOpenSource/AndroidTensorFlowMNISTExample/master/assets/2.png" width="250">
