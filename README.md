@@ -5,7 +5,7 @@
 * Check [this project](https://github.com/amitshekhariitbhu/AndroidTensorFlowMachineLearningExample) for building tensorFlow for Android.
 * Now, there is no need to build the library as the it is now available through maven. Check [this pull request](https://github.com/amitshekhariitbhu/AndroidTensorFlowMNISTExample/pull/1/files).
 
-## [My Personal Blog - amitshekhar.me](https://amitshekhar.me/blog) - High-quality content to learn Android concepts.
+## [Outcome School Blog](https://outcomeschool.com/blog) - High-quality content to learn Android concepts.
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/amitshekhariitbhu/AndroidTensorFlowMNISTExample/master/assets/1.png" width="250">
@@ -34,7 +34,7 @@ You can connect with me on:
 - [GitHub](https://github.com/amitshekhariitbhu)
 - [Facebook](https://www.facebook.com/amit.shekhar.iitbhu)
 
-[**Read all of my blogs here.**](https://amitshekhar.me/blog)
+[**Read all of our blogs here.**](https://outcomeschool.com/blog)
 
 ### License
 ```
